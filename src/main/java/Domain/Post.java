@@ -1,7 +1,6 @@
 package Domain;
 
 public class Post {
-    private String title;
     private int postId;
     private int ownerId;
     private int fromId;
@@ -9,6 +8,9 @@ public class Post {
     private int data;
     private int count;
     private String text;
+    private int replyOwnerId;
+    private int replyPostId;
+    private int singerId;
     private boolean friendsOnly;
     private String comments;
     private String copyrights;
@@ -18,18 +20,14 @@ public class Post {
     private boolean canPost;
     private boolean canEdit;
     private boolean canDelete;
+    private boolean canPin;
     private boolean likes;
     private boolean reposts;
+    private boolean isPinned;
     private boolean markedAsAds;
     private boolean isFavourite;
+    private boolean postponedId;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public int getPostId() {
 
@@ -89,6 +87,36 @@ public class Post {
     public void setText(String text) {
 
         this.text = text;
+    }
+
+    public int getReplyOwnerId() {
+
+        return replyOwnerId;
+    }
+
+    public void setReplyOwnerId(int replyOwnerId) {
+
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+
+        this.replyPostId = replyPostId;
+    }
+
+    public int getSingerId() {
+
+        return singerId;
+    }
+
+    public void setSingerId(int singerId) {
+
+        this.singerId = singerId;
     }
 
     public boolean isFriendsOnly() {
@@ -181,6 +209,15 @@ public class Post {
         this.canDelete = canDelete;
     }
 
+    public boolean isCanPin() {
+
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+
+        this.canPin = canPin;
+    }
 
     public boolean isLikes() {
 
@@ -202,6 +239,15 @@ public class Post {
         this.reposts = reposts;
     }
 
+    public boolean isPinned() {
+
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+
+        isPinned = pinned;
+    }
 
     public boolean isMarkedAsAds() {
 
@@ -223,15 +269,24 @@ public class Post {
         isFavourite = favourite;
     }
 
+    public boolean isPostponedId() {
+
+        return postponedId;
+    }
+
+    public void setPostponedId(boolean postponedId) {
+
+        this.postponedId = postponedId;
+    }
+
     public int getCount() {
 
         return count;
     }
 
     public void setCount(int count) {
+
         this.count = count;
 
     }
-
 }
-
